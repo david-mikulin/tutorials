@@ -36,7 +36,7 @@ public class HttpClientExample {
         HttpRequest request = HttpRequest.newBuilder()
             .version(HttpClient.Version.HTTP_2)
             .uri(URI.create("http://jsonplaceholder.typicode.com/posts/1"))
-            .headers("Accept-Enconding", "gzip, deflate")
+            .headers("Accept-Encoding", "gzip, deflate")
             .build();
         HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 
